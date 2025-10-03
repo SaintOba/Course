@@ -1,0 +1,462 @@
+       
+       
+       /* --- 1. GLOBAL STYLES & VARIABLES --- */
+:root {
+    /* Colors */
+    --primary-color: #76D7C4;
+    --primary-hover-color: #48C9B0;
+    --dark-blue: #2c3e50;
+    --dark-bg: #1c2833;
+    --light-text: #eaeded;
+    --dark-text: #333;
+    --light-gray-bg: #f9f9f9;
+    --white-color: #ffffff;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    /* Fonts */
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--dark-text);
+    background-color: var(--light-gray-bg);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-secondary);
+}
+
+/* Reusable button style */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    padding: 12px 28px;
+    font-size: 1rem;
+}
+
+button a {
+    color: inherit;
+    font-weight: inherit;
+}
+
+
+/* --- 2. HEADER & NAVIGATION --- */
+.container {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(hero.jpg);
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo img {
+    width: 200px; /* Adjusted size */
+    height: 300px;
+    margin: -200px ;
+    margin-left: -30px;
+}
+
+.links ul {
+    display: flex;
+    gap: 25px;
+}
+
+.links a {
+    color: var(--white-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: var(--primary-color);
+}
+
+.cta-button button {
+    background-color: var(--primary-color);
+}
+
+.cta-button button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.cta-button button a {
+    color: var(--white-color);
+}
+
+
+/* --- 3. HERO SECTION --- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 60px 40px;
+    /* flex-wrap: wrap-reverse; Stacks image on top on small screens */
+}
+
+.hero-left {
+    max-width: 600px;
+}
+
+.hero-left h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-left p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.subheading button {
+    background-color: var(--primary-color);
+}
+.subheading button:hover {
+    background-color: var(--primary-hover-color);
+}
+.subheading a {
+    color: var(--white-color);
+}
+
+.hero-right img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+/* --- 4. ABOUT & CURRICULUM SECTION --- */
+.about {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 40px;
+    flex-wrap: wrap;
+}
+
+.course, .curriculum {
+    max-width: 550px;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about p, .about li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.about ol {
+    list-style-position: inside;
+}
+
+.curriculum-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.week-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+}
+
+.week-card h3 {
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+}
+
+
+/* --- 5. BENEFITS SECTION ('Why Choose') --- */
+.benefits {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 80px 40px;
+    background-color: var(--white-color);
+    /* flex-wrap: wrap; */
+}
+
+.choose, .learn {
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+}
+
+.benefits h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.benefits li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+
+/* --- 6. INSTRUCTOR SECTION --- */
+.instructor {
+    background-color: var(--dark-blue);
+    color: var(--light-text);
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.instructor h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.instructor-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.instructor-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-color);
+}
+
+.instructor-bio {
+    max-width: 500px;
+}
+.instructor-bio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.instructor-bio p {
+    line-height: 1.7;
+}
+
+
+/* --- 7. PRICING SECTION --- */
+.pricing {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+.plan {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.box {
+    border: 1px solid #ccc;
+    padding: 40px;
+    border-radius: 15px;
+    min-width: 300px;
+    background-color: var(--white-color);
+    box-shadow: var(--shadow);
+}
+.box h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+
+/* --- 8. TESTIMONIALS, FINAL CTA, FOOTER --- */
+/* Your existing styles for these were already great, so I've just integrated them below. */
+
+.testimonials {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+.testimonials h1 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+.students {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.girl, .boy {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+.girl:hover, .boy:hover {
+    transform: translateY(-10px);
+}
+.students img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid var(--primary-color);
+}
+.students h3 {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.5;
+}
+
+.final {
+    background-color: var(--dark-blue);
+    color: var(--white-color);
+    text-align: center;
+    padding: 70px 20px;
+}
+.final h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+.final p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+.final button {
+    background-color: var(--primary-color);
+}
+.final button:hover {
+    background-color: var(--primary-hover-color);
+}
+.final button a {
+    color: var(--white-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+footer {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding-top: 40px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-contact, .footer-socials {
+    text-align: center;
+}
+footer h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+footer p {
+    margin: 10px 0;
+    color: #bdc3c7;
+}
+footer p i {
+    margin-right: 10px;
+}
+.footer-socials a {
+    color: var(--light-text);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+.footer-socials a:hover {
+    color: var(--primary-color);
+}
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #17202a;
+    border-top: 1px solid #34495e;
+}
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #95a5a6;
+}
+        
+
+/* --- 9. MEDIA QUERIES FOR RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 1rem;
+        border-bottom: none;
+
+    }
+    .links ul {
+        /* flex-direction: column; */
+        gap: 15px;
+        margin-top: 30px;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-left, .hero-right {
+        max-width: 100%;
+    }
+    .about, .benefits, .instructor-box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .instructor-bio {
+        max-width: 100%;
+    }
+    .pricing .plan {
+        flex-direction: column;
+        align-items: center;
+    }
+}
